@@ -8,11 +8,9 @@ data class News(
     val `data`: List<Data>,
 ) {
     data class Data(
-
         @SerializedName("title")
         val title: String,
         @SerializedName("url")
         val url: String
-
     )
 }
