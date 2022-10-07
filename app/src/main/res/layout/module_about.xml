@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:background="@drawable/shape_background_rounded"
+    android:paddingStart="16dp"
+    android:paddingTop="24dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="16dp">
+
+
+    <TextView
+        android:id="@+id/txt_website_title"
+        style="@style/CoinText.BodyAlternate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Website"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_twitter_title"
+        style="@style/CoinText.BodyAlternate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Twitter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_website_title" />
+
+    <TextView
+        android:id="@+id/txt_reddit_title"
+        style="@style/CoinText.BodyAlternate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Reddit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_twitter_title" />
+
+    <TextView
+        android:id="@+id/txt_Github_title"
+        style="@style/CoinText.BodyAlternate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Github"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_reddit_title" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+
+    <TextView
+        android:id="@+id/txt_website_value"
+        style="@style/CoinText.Body"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/n_a"
+        app:layout_constraintStart_toStartOf="@id/guideline_about"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_twitter_value"
+        style="@style/CoinText.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="@string/n_a"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_twitter_title"
+        app:layout_constraintStart_toStartOf="@id/guideline_about"
+        app:layout_constraintTop_toTopOf="@+id/txt_twitter_title" />
+
+    <TextView
+        android:id="@+id/txt_reddit_value"
+        style="@style/CoinText.Body"
+        android:layout_width="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_height="wrap_content"
+        android:text="@string/n_a"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_reddit_title"
+        app:layout_constraintStart_toStartOf="@id/guideline_about"
+        app:layout_constraintTop_toTopOf="@+id/txt_reddit_title" />
+
+    <TextView
+        android:id="@+id/txt_Github_value"
+        android:singleLine="true"
+        android:ellipsize="end"
+        style="@style/CoinText.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/n_a"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_Github_title"
+        app:layout_constraintStart_toStartOf="@id/guideline_about"
+        app:layout_constraintTop_toTopOf="@+id/txt_Github_title" />
+
+
+    <View
+        android:id="@+id/line_about"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/secondaryTextColor"
+        app:layout_constraintTop_toBottomOf="@id/txt_Github_title" />
+
+    <TextView
+        android:id="@+id/txt_desc_about"
+        style="@style/CoinText.Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="4dp"
+        android:maxLines="8"
+        android:text="@string/n_a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_about" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

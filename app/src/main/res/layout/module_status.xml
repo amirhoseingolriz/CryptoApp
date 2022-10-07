@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:background="@drawable/shape_background_rounded"
+    android:paddingStart="16dp"
+    android:paddingTop="24dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="24dp">
+
+
+    <TextView
+        android:id="@+id/txt_open_value"
+        style="@style/CoinText.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/num_0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_open_title"
+        style="@style/CoinText.BodyAlternate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Open"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_open_value" />
+
+    <TextView
+        android:id="@+id/txt_high_value"
+        style="@style/CoinText.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/num_0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_open_title" />
+
+
+    <TextView
+        android:id="@+id/txt_high_title"
+        style="@style/CoinText.BodyAlternate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Today's High"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_high_value" />
+
+    <TextView
+        android:id="@+id/txt_low_value"
+        style="@style/CoinText.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/num_0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_high_title" />
+
+    <TextView
+        android:id="@+id/txt_low_title"
+        style="@style/CoinText.BodyAlternate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Today's Low"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_low_value" />
+
+    <TextView
+        android:id="@+id/txt_change_today_value"
+        style="@style/CoinText.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/num_0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_low_title" />
+
+    <TextView
+        android:id="@+id/txt_change_today_title"
+        style="@style/CoinText.BodyAlternate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Change Today's"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_change_today_value" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+    <TextView
+        android:id="@+id/txt_algorithm_value"
+        style="@style/CoinText.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/n_a"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_open_value"
+        app:layout_constraintStart_toStartOf="@id/guideline_status"
+        app:layout_constraintTop_toTopOf="@+id/txt_open_value" />
+
+    <TextView
+        android:id="@+id/txt_algorithm_title"
+        style="@style/CoinText.BodyAlternate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Algorithm"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_open_title"
+        app:layout_constraintStart_toStartOf="@id/guideline_status"
+        app:layout_constraintTop_toTopOf="@+id/txt_open_title" />
+
+    <TextView
+        android:id="@+id/txt_total_volume_value"
+        style="@style/CoinText.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/num_0"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_high_value"
+        app:layout_constraintStart_toStartOf="@id/guideline_status"
+        app:layout_constraintTop_toTopOf="@+id/txt_high_value" />
+
+    <TextView
+        android:id="@+id/txt_total_volume_title"
+        style="@style/CoinText.BodyAlternate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Total Volume"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_high_title"
+        app:layout_constraintStart_toStartOf="@id/guideline_status"
+        app:layout_constraintTop_toTopOf="@+id/txt_high_title" />
+
+    <TextView
+        android:id="@+id/txt_market_cap_value"
+        style="@style/CoinText.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/num_0"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_low_value"
+        app:layout_constraintStart_toStartOf="@id/guideline_status"
+        app:layout_constraintTop_toTopOf="@+id/txt_low_value" />
+
+    <TextView
+        android:id="@+id/txt_market_cap_title"
+        style="@style/CoinText.BodyAlternate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Market Cap"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_low_title"
+        app:layout_constraintStart_toStartOf="@id/guideline_status"
+        app:layout_constraintTop_toTopOf="@+id/txt_low_title" />
+
+    <TextView
+        android:id="@+id/txt_supply_value"
+        style="@style/CoinText.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/num_0"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_change_today_value"
+        app:layout_constraintStart_toStartOf="@id/guideline_status"
+        app:layout_constraintTop_toTopOf="@+id/txt_change_today_value" />
+
+    <TextView
+        android:id="@+id/txt_supply_title"
+        style="@style/CoinText.BodyAlternate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Supply"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_change_today_title"
+        app:layout_constraintStart_toStartOf="@id/guideline_status"
+        app:layout_constraintTop_toTopOf="@+id/txt_change_today_title" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,89 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="Theme.CryptoApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorAccent</item>
+        <item name="colorOnSecondary">@color/secondaryTextColor</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+
+
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/backgroundColor</item>
+        <item name="fontFamily">sans-serif-medium</item>
+
+        <!--SparkCharCustom-->
+        <item name="spark_SparkViewStyle">@style/MySparkViewStyle</item>
+
+    </style>
+
+
+    <style name="MySparkViewStyle" parent="spark_SparkView">
+        <item name="spark_scrubEnabled">true</item>
+        <item name="spark_animateChanges">true</item>
+        <item name="spark_baseLineColor">@color/colorPrimary</item>
+        <item name="spark_lineColor">@color/colorPrimary</item>
+        <item name="spark_lineWidth">3dp</item>
+    </style>
+
+
+    <!--- Coin text style -->
+    <style name="CoinText" parent="Base.TextAppearance.AppCompat.Caption" />
+
+    <style name="CoinText.Title" parent="CoinText">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="CoinText.TitleAlternate" parent="CoinText">
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="CoinText.Body" parent="CoinText">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="CoinText.BodyAlternate" parent="CoinText">
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="CoinText.Body1" parent="CoinText">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="CoinText.Body1Alternate" parent="CoinText">
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="CoinText.Caption" parent="CoinText">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="CoinText.CaptionAlternate" parent="CoinText">
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="CoinText.Big" parent="CoinText">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textSize">34sp</item>
+    </style>
+
+    <style name="CoinText.Huge" parent="CoinText">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textSize">42sp</item>
+    </style>
+
+
+</resources>
