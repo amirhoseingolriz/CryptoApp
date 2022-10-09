@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.RequestManager
 import dagger.android.support.DaggerAppCompatActivity
 import ir.golriz.amirhosein.cryptoapp.databinding.ActivityMainBinding
 import ir.golriz.amirhosein.cryptoapp.model.data.CoinAboutData
@@ -22,6 +23,9 @@ class MainActivity : DaggerAppCompatActivity(), CoinListAdapter.OnCoinClicked {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var mapCoinAbout: MutableMap<String, CoinAboutData.CoinAboutDataItem.Info>
+
+    @Inject
+    lateinit var glide: RequestManager
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
@@ -89,7 +93,7 @@ class MainActivity : DaggerAppCompatActivity(), CoinListAdapter.OnCoinClicked {
 
         mainViewModel.getTopCoins("USD", 10) { coins ->
 
-            val adapter = CoinListAdapter(coins, this)
+            val adapter = CoinListAdapter(coins, glide, this)
             binding.recyclerCoins.adapter = adapter
             binding.recyclerCoins.layoutManager =
                 LinearLayoutManager(this, RecyclerView.VERTICAL, false)

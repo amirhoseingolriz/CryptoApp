@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
+import com.bumptech.glide.RequestManager
 import ir.golriz.amirhosein.cryptoapp.R
 import ir.golriz.amirhosein.cryptoapp.databinding.ItemCoinListBinding
 import ir.golriz.amirhosein.cryptoapp.model.data.Coins
@@ -14,6 +14,7 @@ import ir.golriz.amirhosein.cryptoapp.utils.BASE_IMG_URL
 
 class CoinListAdapter(
     private val coins: List<Coins.Data>,
+    private val glide: RequestManager,
     private val onCoinClicked: OnCoinClicked
 ) :
     RecyclerView.Adapter<CoinListAdapter.CoinViewHolder>() {
@@ -31,8 +32,7 @@ class CoinListAdapter(
 
 
             //TODO
-            Glide.with(itemView.context)
-                .load(BASE_IMG_URL + coin.coinInfo.imageUrl)
+            glide.load(BASE_IMG_URL + coin.coinInfo.imageUrl)
                 .into(binding.imgCoin)
 
 
