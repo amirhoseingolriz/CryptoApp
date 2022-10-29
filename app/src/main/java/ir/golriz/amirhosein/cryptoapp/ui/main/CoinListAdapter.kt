@@ -31,7 +31,7 @@ class CoinListAdapter(
             binding.txtMarketCapItem.text = coin.dISPLAY.uSD.mKTCAP
 
 
-            //TODO
+
             glide.load(BASE_IMG_URL + coin.coinInfo.imageUrl)
                 .into(binding.imgCoin)
 
